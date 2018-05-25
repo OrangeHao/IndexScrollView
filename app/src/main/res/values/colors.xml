@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#469DE4</color>
+    <color name="colorPrimaryDark">#469DE4</color>
+    <color name="colorAccent">#469DE4</color>
+    <color name="colorBackgroud">#F5F5F5</color>
+    <color name="colorTextColorPrimary">#C3C3C3</color>
+
+    <color name="color_Sel_gray">#3C3D3E</color>
+    <color name="color_item_background_gray">#282828</color>
+    <color name="color_font_gray">#ff959595</color>
+    <color name="black">#000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="gold">#ffa800</color>
+    <color name="white">#ffffffff</color>
+    <color name="no_color">#00000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <!-- actionbar相关颜色 -->
+
+    <!-- 入驻商家相关颜色 -->
+    <color name="slide_menu_text">#000000</color>
+    <color name="slide_menu_text_press">#FFFFFF</color>
+    <!-- 手机充值相关颜色 -->
+    <color name="list_divider">#DADADA</color>
+
+    <!-- 賬單條目相關字體顏色 -->
+    <!-- ListView Item 默認選中顏色 -->
+    <color name="button_back_gray">#306B71</color>
+    <color name="main_item_textcolor">#66000000</color>
+    <color name="main_login_main_color">#333333</color>
+    <color name="gray">#676767</color>
+    <color name="darkgrey">#A9A9A9</color> <!-- 暗灰色 -->
+    <!-- 正常文字顏色 -->
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="transparent">#00000000</color>
+    <color name="default_light_black_color">#424242</color>
+
+    <!-- contact item color -->
+    <color name="message_time_color">#a0a0a0</color>
+
+    <!-- album -->
+    <color name="list_divider_color">#d1d1d1</color>
+    <color name="album_list_item_count_color">#bcbcbc</color>
+
+    <!-- login -->
+
+    <!-- default -->
+    <color name="default_light_grey_color">#929292</color>
+    <color name="default_blue_color">#01aff4</color>
+    <color name="default_title_color">#343434</color>
+
+    <!-- contact -->
+
+    <!-- group manager -->
+
+    <!-- user detail -->
+    <color name="pickimage_item_bg">#ffffff</color>
+
+
+    <color name="colorBlack">#000000</color>
+    <!--浅灰色 -->
+
+    <color name="business_adapter_discount">#F2311C</color>
+
+    <!-- crop image view -->
+    <color name="ycl_black_60">#aa000000</color>
+    <color name="ycl_black_20">#33000000</color>
+    <color name="ycl_overlay">#AA1C1C1C</color>
+    <color name="ycl_handle">#86C166</color>
+    <color name="ycl_frame">#86C166</color>
+    <color name="ycl_guide">#AA86C166</color>
+    <color name="gay_236">#ececec</color>
+
+    <color name="theme_blue">#1fa3e1</color> <!--主要的蓝色背景-->
+    <color name="theme_gay">#f5f5f5</color>  <!--主要的灰色背景-->
+
+    <color name="line_gay">#eaeaea</color>  <!--白色背景下的灰白色背景下的灰色线条颜色色线条颜色-->
+    <color name="line_gay_gay_back">#cecece</color><!--灰色背景下的灰色线条颜色-->
+
+    <!--字体颜色-->
+    <color name="font_black">#494949</color>
+    <color name="font_white">#ffffff</color>
+    <color name="font_blue">#1fa3e1</color>
+    <color name="font_gray">#939393</color>
+    <color name="font_red">#ff2b23</color>
+    <color name="font_green">#32a83a</color>
+    <color name="font_yellow">#ffa800</color>
+    <color name="font_orange">#ffa800</color>
+    <color name="font_dark_gray">#747474</color>
+    <!--提示文字颜色-->
+    <color name="edittext_hint_color">#cdcdcd</color>
+    <!--<color name="font_gray">#ffff00</color>-->
+
+    <!--字体颜色-->
+    <color name="text_black">#303030</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_blue">#087bf6</color>
+    <color name="text_gray">#999999</color>
+    <color name="text_red">#fd0c50</color>
+    <color name="text_green">#32a83a</color>
+    <color name="text_yellow">#ffa800</color>
+    <color name="text_orange">#ffa800</color>
+    <color name="text_dark_gray">#747474</color>
+    <color name="text_hint_color">#cdcdcd</color>
+
+    <!--button颜色  -->
+    <color name="button_blue">#1fa3e0</color>
+    <color name="button_green">#32a83a</color>
+    <color name="button_gray">#cdcdcd</color>
+    <color name="button_orange">#ffa800</color>
+    <color name="button_red">#ff2b23</color>
+
+    <!-- 指引器color -->
+    <color name="line_color">#EEEEEE</color>
+    <color name="color_70">#707070</color>
+    <color name="app_color">#ff572e</color>
+    <color name="color_f2">#F2F2F2</color>
+
+    <color name="bg_normal">#efefef</color>
+    <color name="theme_gray">#F3F3F3</color>
+    <color name="shadow_gray">#bababa</color>
+
+    <!-- 白色 -->
+    <color name="common_pressed">#20000000</color>  <!--白色背景按下去的颜色-->
+    <color name="line">#e8e8e8</color>
+
+
+
+</resources>

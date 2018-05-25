@@ -1,0 +1,116 @@
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="jaskdjfk\njsd\njf"
+            android:textColor="@color/text_black"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_textBold="BOTH"
+            app:tl_indicator_gravity="BOTTOM"
+            app:tl_indicator_margin_bottom="10dp"
+            app:tl_indicator_color="@color/text_blue"
+            app:tl_indicator_corner_radius="0dp"
+            app:tl_indicator_height="3dp"
+            app:tl_tab_padding="10dp"
+            app:tl_textSelectColor="@color/text_blue"
+            app:tl_textUnselectColor="@color/text_gray"
+            app:tl_textsize="18sp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:id="@+id/scroll_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--&gt;-->
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/line_gay">-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/first_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:text="First \nLayout"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="40sp"-->
+    <!--android:background="@color/text_green"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/second_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:text="Second \nLayout"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="40sp"-->
+    <!--android:background="@color/text_red"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/third_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="400dp"-->
+    <!--android:text="Third \nLayout"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="40sp"-->
+    <!--android:background="@color/text_orange"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:text="jaskdjfk\njsd\njf"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="40sp"-->
+    <!--android:background="@color/text_green"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:text="jaskdjfk\njsd\njf"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+
+</android.support.design.widget.CoordinatorLayout>
