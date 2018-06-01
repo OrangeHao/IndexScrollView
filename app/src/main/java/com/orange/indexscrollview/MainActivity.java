@@ -1,21 +1,20 @@
 package com.orange.indexscrollview;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.flyco.tablayout.SlidingTabLayout;
+import com.flyco.tablayout.CommonTabLayout;
+import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 
 import java.util.ArrayList;
@@ -30,13 +29,17 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.recyclerview)
     RecyclerView recyclerview;
     @BindView(R.id.tabLayout)
-    SlidingTabLayout tabLayout;
-    @BindView(R.id.viewpager)
-    ViewPager viewpager;
+    CommonTabLayout tabLayout;
     @BindView(R.id.appBarLayout)
     AppBarLayout appBarLayout;
 
+    private boolean actionFinish=true;
     private AppBarStateChangeListener.State mState=AppBarStateChangeListener.State.EXPANDED;
+
+    public static void start(Context context) {
+        Intent starter = new Intent(context, MainActivity.class);
+        context.startActivity(starter);
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,44 +65,73 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        viewpager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+
+
+        ArrayList<CustomTabEntity> tabData=new ArrayList<>();
+        tabData.add(new CustomTabEntity() {
             @Override
-            public Fragment getItem(int position) {
-                return new Fragment();
+            public String getTabTitle() {
+                return "one";
             }
 
             @Override
-            public int getCount() {
-                return 3;
+            public int getTabSelectedIcon() {
+                return 0;
+            }
+
+            @Override
+            public int getTabUnselectedIcon() {
+                return 0;
             }
         });
+        tabData.add(new CustomTabEntity() {
+            @Override
+            public String getTabTitle() {
+                return "two";
+            }
 
-        String[] tabNames = {"one", "two", "three"};
-        tabLayout.setViewPager(viewpager, tabNames);
+            @Override
+            public int getTabSelectedIcon() {
+                return 0;
+            }
 
+            @Override
+            public int getTabUnselectedIcon() {
+                return 0;
+            }
+        });
+        tabData.add(new CustomTabEntity() {
+            @Override
+            public String getTabTitle() {
+                return "three";
+            }
+
+            @Override
+            public int getTabSelectedIcon() {
+                return 0;
+            }
+
+            @Override
+            public int getTabUnselectedIcon() {
+                return 0;
+            }
+        });
+        tabLayout.setTabData(tabData);
+        tabLayout.setIndicatorAnimEnable(true);
         tabLayout.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelect(int position) {
-//                recyclerview.smoothScrollToPosition(position);
-//                mLayoutManager.scrollToPositionWithOffset(position,0);
+                Log.d("czh","onTabSelect:"+position);
 
-                int top=tabLayout.getTop();
+                actionFinish=false;
                 appBarLayout.setExpanded(false,true);
 
                 move(position);
-                if (position == 0) {
-
-                }
-                if (position == 1) {
-                }
-
-                if (position == 2) {
-                }
             }
 
             @Override
             public void onTabReselect(int position) {
-
+                Log.d("czh","onTabReselect:"+position);
             }
         });
 
@@ -127,19 +159,28 @@ public class MainActivity extends AppCompatActivity {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 Log.d("czh","state:"+newState);
-
+                if (newState==0){
+                    actionFinish=true;
+                }
             }
 
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                TextView temp = recyclerView.findChildViewUnder(0, 0).findViewById(R.id.content);
-                if (temp.getText().toString().equals("0") && viewpager.getCurrentItem()!= 0) {
-                    viewpager.setCurrentItem(0);
-                } else if (temp.getText().toString().equals("1") && viewpager.getCurrentItem()!= 1) {
-                    viewpager.setCurrentItem(1);
-                } else if (temp.getText().toString().equals("2") && viewpager.getCurrentItem()!= 2) {
-                    viewpager.setCurrentItem(2);
+                if (actionFinish){
+                    if (mLayoutManager.findFirstVisibleItemPosition()==0) {
+                        if (tabLayout.getCurrentTab()!=0){
+                            tabLayout.setCurrentTab(0);
+                        }
+                    } else if (mLayoutManager.findFirstVisibleItemPosition()==1) {
+                        if (tabLayout.getCurrentTab()!=1){
+                            tabLayout.setCurrentTab(1);
+                        }
+                    } else if (mLayoutManager.findFirstVisibleItemPosition()==2) {
+                        if (tabLayout.getCurrentTab()!=2){
+                            tabLayout.setCurrentTab(2);
+                        }
+                    }
                 }
 
                 changeNestScrollStateByPosition();
@@ -156,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
                         recyclerview.smoothScrollBy(0, top);
                     }
                 }
+
             }
         });
     }
@@ -180,8 +222,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    boolean move = true;
-
+    boolean move = false;
     private int mIndex = 0;
 
     private void move(int n) {

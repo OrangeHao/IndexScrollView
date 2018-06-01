@@ -1,0 +1,107 @@
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:text="jaskdjfk\njsd\njf"
+            android:textColor="@color/text_black"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            android:fillViewport="false"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="#057523"
+            app:tabIndicatorHeight="2.0dp"
+            app:tabSelectedTextColor="#057523"
+            app:tabTextColor="#ced0d3">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="one" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="two" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="three" />
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line_gay">
+
+
+            <TextView
+                android:id="@+id/first_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="First \nLayout"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:background="@color/text_green"
+                />
+            <TextView
+                android:id="@+id/second_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:text="Second \nLayout"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:background="@color/text_red"
+                />
+            <TextView
+                android:id="@+id/third_layout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:text="Third \nLayout"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:background="@color/text_orange"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
