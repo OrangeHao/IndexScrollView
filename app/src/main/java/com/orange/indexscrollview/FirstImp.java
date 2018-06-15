@@ -23,7 +23,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class FirstImp extends AppCompatActivity {
 
 
     @BindView(R.id.recyclerview)
@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
     private AppBarStateChangeListener.State mState=AppBarStateChangeListener.State.EXPANDED;
 
     public static void start(Context context) {
-        Intent starter = new Intent(context, MainActivity.class);
+        Intent starter = new Intent(context, FirstImp.class);
         context.startActivity(starter);
     }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.first_imp);
         ButterKnife.bind(this);
 
         initView();

@@ -21,19 +21,13 @@ public class Main4Activity extends AppCompatActivity {
         mContext=this;
     }
 
-    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})
+    @OnClick({R.id.btn1, R.id.btn2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn1:
-                MainActivity.start(mContext);
+                FirstImp.start(mContext);
                 break;
             case R.id.btn2:
-                Main2Activity.start(mContext);
-                break;
-            case R.id.btn3:
-                Main3Activity.start(mContext);
-                break;
-            case R.id.btn4:
                 VlayoutActivity.start(mContext);
                 break;
         }
